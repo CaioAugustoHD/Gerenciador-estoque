@@ -19,18 +19,20 @@
         - [x] adicionar objeto no array de lista com todas as lojas
         - [x] armazenar no localStorage a lista de lojas
         - [x] ir para a tela de login
-- [ ] Criar função de login (ao acionar o botao "entrar")
+- [x] Criar função de login (ao acionar o botao "entrar")
   - [x] verificar se o cnpj e a senha estão corretos (se estão registradas no banco de dados)
     - [x] Caso não: exibir mensagem de erro
     - [ ] Caso sim:
-      - [ ] entre na página home com o login da loja
-- [ ] Criar página home, com o gerenciador CRUD de produtos (home.html)
-  - [ ] estilizar base da página (home.css)
+      - [ ] entre na página home com o login e os dados da loja
+- [x] Criar página home, para o gerenciador CRUD de produtos (home.html)
+  - [x] estilizar base da página (home.css)
 - [ ] Criar sistema CRUD dos produtos
   - [ ] funcão adicionar produto
   - [ ] função editar produto
   - [ ] função excluir produto
   - [ ] armazenar produtos no localStorage
+- [ ] Criar configurações da loja
+- [ ] Criar botão de logout
 - [ ] Ao fazer cadastro de nova loja, verificar se o cnpj já está cadastrado
 - [ ] Terminar estilização das páginas
 - [ ] Deixar as páginas responsivas

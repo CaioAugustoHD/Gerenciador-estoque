@@ -70,6 +70,7 @@ function login(){
     listaLojas.forEach((loja) => {
         if((cnpj.value == loja.cnpj) && (senha.value == loja.senha)){
             console.log('cnpj e senha corretos');
+            window.location.replace('http://127.0.0.1:5500/src/home.html');
             verificacaoLogin = true;
         }
     });
