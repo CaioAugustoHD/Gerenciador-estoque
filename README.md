@@ -9,10 +9,10 @@
 - [x] Criar página de cadastro para uma nova loja (cadastro.html)
   - [x] estilizar base da página (cadastro.html)
 - [ ] Criar função de cadastro (ao acionar o botao "cadastrar")
-  - [ ] validar se os valores estão corretos
+  - [x] validar se os valores estão corretos
     - [x] cnpj com 14 dígitos
     - [x] senha com mínimo de 5 caracteres
-      - [ ] Caso não: exibir mensagem de erro
+      - [x] Caso não: exibir mensagem de erro
       - [ ] Caso sim:    
         - [ ] pegar os valores de cada input
         - [ ] criar um objeto da classe lojas com os dados na loja cadastrada

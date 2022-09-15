@@ -17,19 +17,34 @@ class lojas{
     }
 }
 
-function validacao(){
+let validacao;
+function validarDados(){
+    validacao = false;
+    let cnpj = false;
+    let senha = false;
+
     // validar cnpj
     if(cadcnpj.value.length == 14){
-        console.log('valido')
-    } 
+        cnpj = true;
+    } else{
+        alert('CNPJ inválido!');
+    }
 
     //validar senha
     if(cadSenha.value.length > 4){
-        console.log('senha valida')
+        senha = true;
+    } else{
+        alert('Sua senha deve ter no mínimo 5 caracteres!');
     }
+
+    validacao = (cnpj == true) && (senha == true) ? true : false;
 }
 
 
+
 function cadastrar(){
-    validacao();
+    validarDados();
+    if(validacao == true){
+        console.log('Dados validados e corretos');
+    }
 }
