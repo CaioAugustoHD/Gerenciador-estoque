@@ -10,13 +10,15 @@
   - [x] estilizar base da página (cadastro.html)
 - [ ] Criar função de cadastro (ao acionar o botao "cadastrar")
   - [ ] validar se os valores estão corretos
-    - [ ] Caso não: exibir mensagem de erro
-    - [ ] Caso sim:    
-      - [ ] pegar os valores de cada input
-      - [ ] criar um objeto da classe lojas com os dados na loja cadastrada
-      - [ ] adicionar objeto no array de lista com todas as lojas
-      - [ ] armazenar no localStorage a lista de lojas
-      - [ ] ir para a tela de login
+    - [x] cnpj com 14 dígitos
+    - [x] senha com mínimo de 5 caracteres
+      - [ ] Caso não: exibir mensagem de erro
+      - [ ] Caso sim:    
+        - [ ] pegar os valores de cada input
+        - [ ] criar um objeto da classe lojas com os dados na loja cadastrada
+        - [ ] adicionar objeto no array de lista com todas as lojas
+        - [ ] armazenar no localStorage a lista de lojas
+        - [ ] ir para a tela de login
 - [ ] Criar função de login (ao acionar o botao "entrar")
   - [ ] validar se o cnpj e a senha estão corretos (se estão registradas no banco de dados)
     - [ ] Caso não: exibir mensagem de erro
@@ -32,4 +34,10 @@
 - [ ] Ao fazer cadastro de nova loja, verificar se o cnpj já está cadastrado
 - [ ] Terminar estilização das páginas
 - [ ] Deixar as páginas responsivas
+
+---
+
+Futuras melhorias
+- [ ] Limitar no input de cnpj máximo de 14 dígitos
+- [ ] Estilizar mensagens de erro
 
