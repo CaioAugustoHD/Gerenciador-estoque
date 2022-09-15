@@ -6,7 +6,6 @@ const cadSenha = document.getElementById('cadSenha');
 const botao = document.querySelector('button');
 botao.addEventListener('click', cadastrar);
 
-listaLojas = [];
 
 class lojas {
     constructor(nome, loja, cnpj, senha){
@@ -43,10 +42,17 @@ function validarDados(){
 
 
 function cadastrar(){
+
     validarDados();
     if(validacao == true){
 
+        let listaLojas = JSON.parse(localStorage.getItem('listaLojas') || '[]');
+
         let novaLoja = new lojas(cadNome.value, cadLoja.value, cadcnpj.value, cadSenha.value);
-        console.log(novaLoja);
+        listaLojas.push(novaLoja);
+
+        localStorage.setItem('listaLojas', JSON.stringify(listaLojas));
+        
+        window.location.replace("http://127.0.0.1:5500/src/login.html");
     }
 }
