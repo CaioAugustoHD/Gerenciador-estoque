@@ -63,11 +63,20 @@ function cadastrar(){
 
 function login(){
 
+    let verificacaoLogin = false;
+
     listaLojas = JSON.parse(localStorage.getItem('listaLojas') || '[]');
 
     listaLojas.forEach((loja) => {
         if((cnpj.value == loja.cnpj) && (senha.value == loja.senha)){
             console.log('cnpj e senha corretos');
+            verificacaoLogin = true;
         }
     });
+
+    
+    // mensagem erro de login
+    if(verificacaoLogin == false){
+        alert('CNPJ ou senha incorreto!');
+    }
 }

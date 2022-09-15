@@ -21,7 +21,7 @@
         - [x] ir para a tela de login
 - [ ] Criar função de login (ao acionar o botao "entrar")
   - [x] verificar se o cnpj e a senha estão corretos (se estão registradas no banco de dados)
-    - [ ] Caso não: exibir mensagem de erro
+    - [x] Caso não: exibir mensagem de erro
     - [ ] Caso sim:
       - [ ] entre na página home com o login da loja
 - [ ] Criar página home, com o gerenciador CRUD de produtos (home.html)
