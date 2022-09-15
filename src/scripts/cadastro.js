@@ -1,10 +1,12 @@
+//>>>>>>>>>>PAGINA CADASTRO>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 const cadNome = document.getElementById('cadNome');
 const cadLoja = document.getElementById('cadLoja');
 const cadcnpj = document.getElementById('cadcnpj');
 const cadSenha = document.getElementById('cadSenha');
 
-const botao = document.querySelector('button');
-botao.addEventListener('click', cadastrar);
+//>>>>>>>>>>PAGINA LOGIN>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+const cnpj = document.getElementById('cnpj');
+const senha = document.getElementById('senha');
 
 
 class lojas {
@@ -41,12 +43,13 @@ function validarDados(){
 }
 
 
+let listaLojas;
 function cadastrar(){
 
     validarDados();
     if(validacao == true){
 
-        let listaLojas = JSON.parse(localStorage.getItem('listaLojas') || '[]');
+        listaLojas = JSON.parse(localStorage.getItem('listaLojas') || '[]');
 
         let novaLoja = new lojas(cadNome.value, cadLoja.value, cadcnpj.value, cadSenha.value);
         listaLojas.push(novaLoja);
@@ -55,4 +58,9 @@ function cadastrar(){
         
         window.location.replace("http://127.0.0.1:5500/src/login.html");
     }
+}
+
+
+function login(){
+console.log('clicado');
 }

@@ -20,7 +20,7 @@
         - [x] armazenar no localStorage a lista de lojas
         - [x] ir para a tela de login
 - [ ] Criar função de login (ao acionar o botao "entrar")
-  - [ ] validar se o cnpj e a senha estão corretos (se estão registradas no banco de dados)
+  - [ ] verificar se o cnpj e a senha estão corretos (se estão registradas no banco de dados)
     - [ ] Caso não: exibir mensagem de erro
     - [ ] Caso sim:
       - [ ] entre na página home com o login da loja
