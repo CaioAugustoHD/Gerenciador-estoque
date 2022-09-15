@@ -62,5 +62,12 @@ function cadastrar(){
 
 
 function login(){
-console.log('clicado');
+
+    listaLojas = JSON.parse(localStorage.getItem('listaLojas') || '[]');
+
+    listaLojas.forEach((loja) => {
+        if((cnpj.value == loja.cnpj) && (senha.value == loja.senha)){
+            console.log('cnpj e senha corretos');
+        }
+    });
 }
