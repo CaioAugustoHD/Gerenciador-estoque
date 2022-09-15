@@ -14,8 +14,8 @@
     - [x] senha com mínimo de 5 caracteres
       - [x] Caso não: exibir mensagem de erro
       - [ ] Caso sim:    
-        - [ ] pegar os valores de cada input
-        - [ ] criar um objeto da classe lojas com os dados na loja cadastrada
+        - [x] pegar os valores de cada input
+        - [x] criar um objeto da classe lojas com os dados na loja cadastrada
         - [ ] adicionar objeto no array de lista com todas as lojas
         - [ ] armazenar no localStorage a lista de lojas
         - [ ] ir para a tela de login

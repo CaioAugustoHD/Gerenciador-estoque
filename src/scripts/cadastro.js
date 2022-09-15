@@ -8,7 +8,7 @@ botao.addEventListener('click', cadastrar);
 
 listaLojas = [];
 
-class lojas{
+class lojas {
     constructor(nome, loja, cnpj, senha){
         this.nome = nome;
         this.loja = loja;
@@ -16,6 +16,7 @@ class lojas{
         this.senha = senha;
     }
 }
+
 
 let validacao;
 function validarDados(){
@@ -41,10 +42,11 @@ function validarDados(){
 }
 
 
-
 function cadastrar(){
     validarDados();
     if(validacao == true){
-        console.log('Dados validados e corretos');
+
+        let novaLoja = new lojas(cadNome.value, cadLoja.value, cadcnpj.value, cadSenha.value);
+        console.log(novaLoja);
     }
 }
