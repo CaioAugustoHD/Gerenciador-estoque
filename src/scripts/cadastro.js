@@ -15,6 +15,7 @@ class lojas {
         this.loja = loja;
         this.cnpj = cnpj;
         this.senha = senha;
+        this.produtos = [];
     }
 }
 
@@ -61,6 +62,13 @@ function cadastrar(){
 }
 
 
+let lojaLogada = {
+    nomeLog : "",
+    lojalog : "",
+    cnpjlog : "",
+    senhalog : "",
+    produtoslog : ""
+}
 function login(){
 
     let verificacaoLogin = false;
@@ -70,8 +78,19 @@ function login(){
     listaLojas.forEach((loja) => {
         if((cnpj.value == loja.cnpj) && (senha.value == loja.senha)){
             console.log('cnpj e senha corretos');
-            window.location.replace('http://127.0.0.1:5500/src/home.html');
             verificacaoLogin = true;
+
+            lojaLogada = {
+                nomeLog : loja.nome,
+                lojaLog : loja.loja,
+                cnpjLog : loja.cnpj,
+                senhaLog : loja.senha,
+                produtosLog : loja.produtos
+            }
+
+            localStorage.setItem('lojaLogada', JSON.stringify(lojaLogada));
+            
+            window.location.replace('http://127.0.0.1:5500/src/home.html');
         }
     });
 

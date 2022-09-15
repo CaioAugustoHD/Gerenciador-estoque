@@ -22,15 +22,17 @@
 - [x] Criar função de login (ao acionar o botao "entrar")
   - [x] verificar se o cnpj e a senha estão corretos (se estão registradas no banco de dados)
     - [x] Caso não: exibir mensagem de erro
-    - [ ] Caso sim:
-      - [ ] entre na página home com o login e os dados da loja
+    - [x] Caso sim:
+      - [x] entre na página home com o login e os dados da loja
 - [x] Criar página home, para o gerenciador CRUD de produtos (home.html)
   - [x] estilizar base da página (home.css)
 - [ ] Criar sistema CRUD dos produtos
-  - [ ] funcão adicionar produto
-  - [ ] função editar produto
-  - [ ] função excluir produto
-  - [ ] armazenar produtos no localStorage
+  - [ ] funcão adicionar produto na lista e localStorage
+    -[ ] adicionar na tabela
+  - [ ] função editar produto da lista e localStorage
+    - [ ] alterar na tabela
+  - [ ] função excluir produto da lista e localStorage
+    - [ ]excluir da tabela
 - [ ] Criar configurações da loja
 - [ ] Criar botão de logout
 - [ ] Ao fazer cadastro de nova loja, verificar se o cnpj já está cadastrado
