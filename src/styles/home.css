@@ -6,6 +6,66 @@
     font-family: 'Inter', sans-serif;
 }
 
+/* MODAL */
+.modal {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+/* ABA MODAL */
+.create{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    min-width: 275px;
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
+/* DIV FILHAS DO MODAL */
+.create div{
+    margin: 10px;
+}
+
+/* BOTOES NO MODAL */
+.btn-modal{
+    border: 1px solid black;
+    width: 18px;
+    border-radius: 50%;
+}
+
+/* BOTOES CANCELAR */
+.btn-cancelar{
+    background-color: transparent;
+    border: 0;
+    margin: 0 15px;
+}
+
+/* DIV NO MODAL DOS BOTOES  */
+div.divbtn-modal{
+    margin: 15px 10px;
+}
+
+
+input{
+    outline: 0;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 85%;
+    padding: 4px;
+    margin-top: 3px;
+}
+
+input[type="number"]{
+    width: 50%;
+}
+
 header{
     background-color: rgba(0, 0, 0, 0.2);
     padding: 20px;
@@ -18,4 +78,8 @@ table {
     width: 70%;
     height: 50px;
     border-collapse: collapse;
+}
+
+button {
+    cursor: pointer;
 }
