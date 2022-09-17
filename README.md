@@ -4,6 +4,8 @@
 
 ---
 
+<h2>Sistema cadastro e login</h2>
+
 - [x] Criar página de login da loja (login.html)
   - [x] estilizar base da página (login.css)
 - [x] Criar página de cadastro para uma nova loja (cadastro.html)
@@ -24,25 +26,44 @@
     - [x] Caso não: exibir mensagem de erro
     - [x] Caso sim:
       - [x] entre na página home com o login e os dados da loja
-- [x] Criar página home, para o gerenciador CRUD de produtos (home.html)
-  - [x] estilizar base da página (home.css)
-  - [x] criar modal
-- [ ] Criar sistema CRUD dos produtos
-  - [ ] funcão adicionar produto na lista e localStorage
-    -[ ] adicionar na tabela
-  - [ ] função editar produto da lista e localStorage
-    - [ ] alterar na tabela
-  - [ ] função excluir produto da lista e localStorage
-    - [ ] excluir da tabela
-- [ ] Criar configurações da loja
-- [ ] Criar botão de logout
-- [ ] Ao fazer cadastro de nova loja, verificar se o cnpj já está cadastrado
-- [ ] Terminar estilização das páginas
-- [ ] Deixar as páginas responsivas
 
 ---
 
-Futuras melhorias
+- [x] Criar página home, para o gerenciador CRUD de produtos (home.html)
+  - [x] estilizar base da página (home.css)
+  - [x] criar modal
+
+---
+
+<h2>Criar sistema CRUD dos produtos</h2>
+
+- [x] funcão adicionar produto
+  - [ ] validar dados do produto. Se SIM: 
+    - [ ] adicionar produto na lista e localStorage
+    - [ ] adicionar na tabela 
+- [ ] função editar produto da lista e localStorage
+  - [ ] validar dados do produto. Se SIM:
+    - [ ] alterar na lista e localSorage
+    - [ ] alterar na tabela 
+- [ ] função excluir produto
+  - [ ] excluir da lista e localStorage
+  - [ ] excluir da tabela
+
+---
+
+- [ ] Criar função de logout
+- [ ] excluir os itens necessarios no localStorage
+- [ ] Ao fazer cadastro de nova loja, verificar se o cnpj já está cadastrado
+- [ ] Terminar estilização das páginas
+- [ ] Deixar as páginas responsivas
+- [ ] Validar TODOS os campos de input do projeto
+- [ ] deixar todas as paginas com token 
+
+---
+
+<h2>Futuras melhorias</h2>
+
 - [ ] Limitar no input de cnpj máximo de 14 dígitos
 - [ ] Estilizar mensagens de erro
+- [ ] Criar configurações da loja
 

@@ -67,7 +67,8 @@ let lojaLogada = {
     lojalog : "",
     cnpjlog : "",
     senhalog : "",
-    produtoslog : ""
+    indexLog : "",
+    produtosLog : ""
 }
 function login(){
 
@@ -75,7 +76,7 @@ function login(){
 
     listaLojas = JSON.parse(localStorage.getItem('listaLojas') || '[]');
 
-    listaLojas.forEach((loja) => {
+    listaLojas.forEach((loja, index) => {
         if((cnpj.value == loja.cnpj) && (senha.value == loja.senha)){
             console.log('cnpj e senha corretos');
             verificacaoLogin = true;
@@ -85,6 +86,7 @@ function login(){
                 lojaLog : loja.loja,
                 cnpjLog : loja.cnpj,
                 senhaLog : loja.senha,
+                indexLog : index,
                 produtosLog : loja.produtos
             }
 
