@@ -40,7 +40,7 @@
 - [x] Funcão adicionar produto
   - [x] validar dados do produto. Se SIM: 
     - [x] adicionar produto na lista e localStorage
-    - [ ] adicionar na tabela 
+    - [x] adicionar na tabela 
 - [ ] Função editar produto da lista e localStorage
   - [ ] validar dados do produto. Se SIM:
     - [ ] alterar na lista e localSorage

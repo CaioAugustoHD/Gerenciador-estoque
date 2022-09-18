@@ -1,3 +1,5 @@
+const corpoTabela = document.querySelector('tbody');
+
 // MODAL CREATE
 const btnAbrirModalCreate = document.getElementById('btnAbrirModalCreate');
 btnAbrirModalCreate.addEventListener('click', abrirModalCreate);
@@ -11,7 +13,7 @@ btnCancelar.addEventListener('click', fecharModal);
 // INPUT'S
 const addProduto = document.getElementById('addProduto');
 const addQuantidade = document.getElementById('addQuantidade');
-const addPreço = document.getElementById('addPreço');
+const addPreco = document.getElementById('addPreco');
 
 
 function abrirModalCreate(){
@@ -20,7 +22,7 @@ function abrirModalCreate(){
 
 function fecharModal(){
     modalCreate.style.display = 'none';
-    addPreço.value = "";
+    addPreco.value = "";
     addProduto.value = "";
     addQuantidade.value = "";
 }
@@ -38,10 +40,10 @@ const lerLojaLogada = () => lojaLogada = JSON.parse(localStorage.getItem('lojaLo
 
 // ADICIONAR PRODUTO
 class produtos {
-    constructor(produto, quantidade, preço){
+    constructor(produto, quantidade, preco){
         this.produto = produto;
         this.quantidade = quantidade;
-        this.preço = preço;
+        this.preco = preco;
     }
 }
 
@@ -60,10 +62,39 @@ function adicionarProduto(){
 
     lerLojaLogada();
     
-   let produto = new produtos(addProduto.value, addQuantidade.value, addPreço.value);
+   let produto = new produtos(addProduto.value, addQuantidade.value, addPreco.value);
    lojaLogada.produtosLog.push(produto);
 
    localStorage.setItem('lojaLogada', JSON.stringify(lojaLogada));
 
+    // LER E ADICIONAR
+   adicionarNaTabela(addProduto.value, addQuantidade.value, addPreco.value);
    fecharModal();
 }
+
+function adicionarNaTabela(produto, quantidade, preco){
+
+    const linha = document.createElement('tr');
+    const produtoTabela = document.createElement('td');
+    const produtoQuantidade = document.createElement('td');
+    const produtoPreco = document.createElement('td');
+
+    linha.appendChild(produtoTabela);
+    linha.appendChild(produtoQuantidade);
+    linha.appendChild(produtoPreco);
+    corpoTabela.appendChild(linha);
+
+    produtoTabela.innerHTML = produto;
+    produtoQuantidade.innerHTML = quantidade;
+    produtoPreco.innerHTML = preco;
+}
+
+function lerProdutosRegistrados(){
+
+    lerLojaLogada();
+    lojaLogada.produtosLog.forEach(produto => {
+        adicionarNaTabela(produto.produto, produto.quantidade, produto.preco);        
+    });
+}
+
+lerProdutosRegistrados();
