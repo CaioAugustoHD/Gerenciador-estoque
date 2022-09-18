@@ -37,27 +37,28 @@
 
 <h2>Criar sistema CRUD dos produtos</h2>
 
-- [x] funcão adicionar produto
-  - [ ] validar dados do produto. Se SIM: 
-    - [ ] adicionar produto na lista e localStorage
+- [x] Funcão adicionar produto
+  - [x] validar dados do produto. Se SIM: 
+    - [x] adicionar produto na lista e localStorage
     - [ ] adicionar na tabela 
-- [ ] função editar produto da lista e localStorage
+- [ ] Função editar produto da lista e localStorage
   - [ ] validar dados do produto. Se SIM:
     - [ ] alterar na lista e localSorage
     - [ ] alterar na tabela 
-- [ ] função excluir produto
+- [ ] Função excluir produto
   - [ ] excluir da lista e localStorage
   - [ ] excluir da tabela
+- [ ] Criar função de logout
+  - [ ] excluir os itens necessarios no localStorage
 
 ---
 
-- [ ] Criar função de logout
-- [ ] excluir os itens necessarios no localStorage
-- [ ] Ao fazer cadastro de nova loja, verificar se o cnpj já está cadastrado
 - [ ] Terminar estilização das páginas
 - [ ] Deixar as páginas responsivas
 - [ ] Validar TODOS os campos de input do projeto
-- [ ] deixar todas as paginas com token 
+  - [ ] ao cadastrar nova loja, verificar se o cnpj já está cadastrado
+  - [ ] ao adicionar/editar produto, verificar se o nome já existe
+- [ ] Deixar todas as paginas com token 
 
 ---
 

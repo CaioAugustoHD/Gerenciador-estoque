@@ -4,7 +4,7 @@ btnAbrirModalCreate.addEventListener('click', abrirModalCreate);
 
 const modalCreate = document.getElementById('modal-create'); 
 const btnAdicionar = document.getElementById('btnAdicionar');
-btnAdicionar.addEventListener('click', adicionarProduto);
+btnAdicionar.addEventListener('click', validarDados);
 const btnCancelar = document.querySelector('.btn-cancelar');
 btnCancelar.addEventListener('click', fecharModal);
 
@@ -42,6 +42,17 @@ class produtos {
         this.produto = produto;
         this.quantidade = quantidade;
         this.preço = preço;
+    }
+}
+
+
+// VALIDAR DADOS DE ADC PRODUTO E ATIVAR A FUNÇÃO adicionarProduto
+function validarDados(){
+
+    if(addProduto.value.length >= 3){
+        adicionarProduto();
+    } else {
+        alert('O nome do produto deve conter no mínimo 3 caracteres!');
     }
 }
 
