@@ -100,14 +100,16 @@ function adicionarProduto(){
 }
 
 let indexProduto;
+let produtoSelecionado;
 function capturarProduto(){
     
     lerLojaLogada();
     
-    const produtoSelecionado = event.target.parentElement.parentElement.firstElementChild.textContent;
+    produtoSelecionado = event.target.parentElement.parentElement;
+    let nomeProdutoSelecionado = produtoSelecionado.firstElementChild.textContent;
     
     lojaLogada.produtosLog.forEach((produto, index) => {
-        if(produtoSelecionado == produto.produto){
+        if(nomeProdutoSelecionado == produto.produto){
             indexProduto = index;
 
             editProduto.value = produto.produto;
@@ -127,6 +129,11 @@ function salvarProduto(){
     
     lojaLogada.produtosLog[indexProduto] = produtoEditado;
     localStorage.setItem('lojaLogada', JSON.stringify(lojaLogada));
+
+    // ATUALIZAR IMEDIATAMENTE NA TABELA
+    produtoSelecionado.firstElementChild.innerHTML = produtoEditado.produto;
+    produtoSelecionado.children[1].innerHTML = produtoEditado.quantidade;
+    produtoSelecionado.children[2].innerHTML = produtoEditado.preco;
 
     fecharModal();
 }

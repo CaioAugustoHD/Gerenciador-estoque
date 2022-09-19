@@ -46,10 +46,10 @@
   - [x] criar botão e modal para edicão
   - [x] criar funcao capturar os dados e o elemento que foi selecionado
   - [x] exibir no input os dados capturados
-  - [ ] criar função botão salvar
+  - [x] criar função botão salvar
     - [x] validar dados do produto. Se SIM:
       - [x] alterar/substituir na lista e localSorage
-      - [ ] alterar na tabela 
+      - [x] alterar na tabela 
 - [ ] Função excluir produto
   - [ ] excluir da lista e localStorage
   - [ ] excluir da tabela
