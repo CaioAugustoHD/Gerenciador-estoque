@@ -20,18 +20,17 @@ btnCancelar.forEach((botao) => {
 })
 
 //MODAL EDIT
-function lerBotoesEditar(){
-    let btnAbrirModalEdit = document.querySelectorAll('.btnAbrirModalEdit');
-    btnAbrirModalEdit.forEach((botao) => {
-        botao.addEventListener('click', () => {
-            capturarProduto()
-            abrirModal(modalEdit)
-        })
-    });
-}
+let btnAbrirModalEdit = document.querySelectorAll('.btnAbrirModalEdit');
 
 const modalEdit = document.getElementById('modal-edit');
 const btnSalvar = document.getElementById('btnSalvar');
+btnSalvar.addEventListener('click', validarDados);
+
+    // INPUT'S
+const editProduto = document.getElementById('editProduto');
+const editQuantidade = document.getElementById('editQuantidade');
+const editPreco = document.getElementById('editPreco');
+
 
 function abrirModal(modal){
     modal.style.display = 'block';
@@ -40,9 +39,16 @@ function abrirModal(modal){
 function fecharModal(){
     modalCreate.style.display = 'none';
     modalEdit.style.display = 'none';
+
     addPreco.value = "";
     addProduto.value = "";
     addQuantidade.value = "";
+
+    editPreco.value = "";
+    editProduto.value = "";
+    editQuantidade.value = "";
+
+    indexProduto = "";
 }
 
 let lojaLogada = {
@@ -71,6 +77,8 @@ function validarDados(){
 
     if(addProduto.value.length >= 3){
         adicionarProduto();
+    } else if (editProduto.value.length >= 3){
+        salvarProduto();
     } else {
         alert('O nome do produto deve conter no mínimo 3 caracteres!');
     }
@@ -88,8 +96,10 @@ function adicionarProduto(){
     // LER E ADICIONAR
    adicionarNaTabela(addProduto.value, addQuantidade.value, addPreco.value);
    fecharModal();
+
 }
 
+let indexProduto;
 function capturarProduto(){
     
     lerLojaLogada();
@@ -98,10 +108,27 @@ function capturarProduto(){
     
     lojaLogada.produtosLog.forEach((produto, index) => {
         if(produtoSelecionado == produto.produto){
-            produto.index = index;
-            console.log(produto);
+            indexProduto = index;
+
+            editProduto.value = produto.produto;
+            editQuantidade.value = produto.quantidade;
+            editPreco.value = produto.preco;
         }
     });
+}
+
+function salvarProduto(){
+    
+    let produtoEditado = {
+        produto : editProduto.value,
+        quantidade : editQuantidade.value,
+        preco : editPreco.value
+    }
+    
+    lojaLogada.produtosLog[indexProduto] = produtoEditado;
+    localStorage.setItem('lojaLogada', JSON.stringify(lojaLogada));
+
+    fecharModal();
 }
 
 function adicionarNaTabela(produto, quantidade, preco){
@@ -115,6 +142,10 @@ function adicionarNaTabela(produto, quantidade, preco){
     const btnEditar = document.createElement('button');
     btnEditar.innerHTML = "Edit";
     btnEditar.className = "btn-crud btnAbrirModalEdit";
+    btnEditar.addEventListener('click', () => {
+        capturarProduto();
+        abrirModal(modalEdit);
+    })
 
     const btnExcluir = document.createElement('button');
     btnExcluir.innerHTML = "Del";
@@ -146,5 +177,3 @@ function lerProdutosRegistrados(){
 }
 
 lerProdutosRegistrados();
-
-lerBotoesEditar();
