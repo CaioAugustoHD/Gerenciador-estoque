@@ -23,6 +23,7 @@
                     <th>Produto</th>
                     <th>Quantidade</th>
                     <th>Preço</th>
+                    <th>Opções</th>
                 </tr>
             </thead>
             <tbody>
@@ -30,12 +31,13 @@
                     <td>Jordan nike</td>
                     <td>56</td>
                     <td>R$120,00</td>
+                    <td><button class="btn-crud btnAbrirModalEdit">Edit</button><button class="btn-crud btnExcluirProduto">Del</button></td>
                 </tr>
             </tbody>
         </table>
     </main>
     <div class="modal" id="modal-create">
-        <div class="create">
+        <div class="aba-modal">
             <div>
                 <label for="addProduto">Produto</label><br>
                 <input type="text" id="addProduto">
@@ -49,7 +51,27 @@
                 <input type="number" id="addPreco">
             </div>
             <div class="divbtn-modal">
-                <button id="btnAdicionar" class="btn-modal" type="button">+</button>
+                <button id="btnAdicionar" class="btn-modal" type="button">Adicionar</button>
+                <button class="btn-cancelar" type="button">Cancelar</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="modal-edit">
+        <div class="aba-modal">
+            <div>
+                <label for="editProduto">Produto</label><br>
+                <input type="text" id="editProduto">
+            </div>
+            <div>
+                <label for="editQuantidade">Quantidade no estoque</label>
+                <input type="number" id="editQuantidade">
+            </div>
+            <div>
+                <label for="editPreco">Preço a ser vendido</label>
+                <input type="number" id="editPreco">
+            </div>
+            <div class="divbtn-modal">
+                <button id="btnSalvar" class="btn-modal" type="button">Salvar</button>
                 <button class="btn-cancelar" type="button">Cancelar</button>
             </div>
         </div>

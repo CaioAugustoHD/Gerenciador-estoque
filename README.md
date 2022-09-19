@@ -41,9 +41,12 @@
   - [x] validar dados do produto. Se SIM: 
     - [x] adicionar produto na lista e localStorage
     - [x] adicionar na tabela 
+    - [x] ao recarregar a página, os produtos ja registrados são insseridos na tabela
 - [ ] Função editar produto da lista e localStorage
+  - [x] criar botão e modal para edicão
+  - [ ] capturar os dados e o elemento que foi selecionado
   - [ ] validar dados do produto. Se SIM:
-    - [ ] alterar na lista e localSorage
+    - [ ] alterar/substituir na lista e localSorage
     - [ ] alterar na tabela 
 - [ ] Função excluir produto
   - [ ] excluir da lista e localStorage

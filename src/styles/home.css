@@ -17,7 +17,7 @@
 }
 
 /* ABA MODAL */
-.create{
+.aba-modal{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -29,15 +29,15 @@
 }
 
 /* DIV FILHAS DO MODAL */
-.create div{
+.aba-modal div{
     margin: 10px;
 }
 
 /* BOTOES NO MODAL */
 .btn-modal{
     border: 1px solid black;
-    width: 18px;
-    border-radius: 50%;
+    padding: 2px 5px;
+    border-radius: 10px;
 }
 
 /* BOTOES CANCELAR */

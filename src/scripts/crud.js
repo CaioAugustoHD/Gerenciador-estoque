@@ -2,26 +2,41 @@ const corpoTabela = document.querySelector('tbody');
 
 // MODAL CREATE
 const btnAbrirModalCreate = document.getElementById('btnAbrirModalCreate');
-btnAbrirModalCreate.addEventListener('click', abrirModalCreate);
+btnAbrirModalCreate.addEventListener('click', () => abrirModal(modalCreate));
 
 const modalCreate = document.getElementById('modal-create'); 
 const btnAdicionar = document.getElementById('btnAdicionar');
 btnAdicionar.addEventListener('click', validarDados);
-const btnCancelar = document.querySelector('.btn-cancelar');
-btnCancelar.addEventListener('click', fecharModal);
 
-// INPUT'S
+    // INPUT'S
 const addProduto = document.getElementById('addProduto');
 const addQuantidade = document.getElementById('addQuantidade');
 const addPreco = document.getElementById('addPreco');
 
+// TODOS BOTOES DE CANCELAR
+const btnCancelar = document.querySelectorAll('.btn-cancelar');
+btnCancelar.forEach((botao) => {
+    botao.addEventListener('click', fecharModal);
+})
 
-function abrirModalCreate(){
-    modalCreate.style.display = 'block';
+//MODAL EDIT
+function lerBotoesEditar(){
+    let btnAbrirModalEdit = document.querySelectorAll('.btnAbrirModalEdit');
+    btnAbrirModalEdit.forEach((botao) => {
+    botao.addEventListener('click', () => abrirModal(modalEdit));
+    });
+}
+
+const modalEdit = document.getElementById('modal-edit');
+const btnSalvar = document.getElementById('btnSalvar');
+
+function abrirModal(modal){
+    modal.style.display = 'block';
 }
 
 function fecharModal(){
     modalCreate.style.display = 'none';
+    modalEdit.style.display = 'none';
     addPreco.value = "";
     addProduto.value = "";
     addQuantidade.value = "";
@@ -76,17 +91,32 @@ function adicionarNaTabela(produto, quantidade, preco){
 
     const linha = document.createElement('tr');
     const produtoTabela = document.createElement('td');
-    const produtoQuantidade = document.createElement('td');
-    const produtoPreco = document.createElement('td');
+    const quantidadeTabela = document.createElement('td');
+    const precoTabela = document.createElement('td');
+    const opcoes = document.createElement('td');
+
+    const btnEditar = document.createElement('button');
+    btnEditar.innerHTML = "Edit";
+    btnEditar.className = "btn-crud btnAbrirModalEdit";
+
+    const btnExcluir = document.createElement('button');
+    btnExcluir.innerHTML = "Del";
+    btnExcluir.className = "btn-crud btnExcluirProduto";
+
 
     linha.appendChild(produtoTabela);
-    linha.appendChild(produtoQuantidade);
-    linha.appendChild(produtoPreco);
+    linha.appendChild(quantidadeTabela);
+    linha.appendChild(precoTabela);
+    
+    opcoes.appendChild(btnEditar);
+    opcoes.appendChild(btnExcluir);
+    linha.appendChild(opcoes);
+
     corpoTabela.appendChild(linha);
 
     produtoTabela.innerHTML = produto;
-    produtoQuantidade.innerHTML = quantidade;
-    produtoPreco.innerHTML = preco;
+    quantidadeTabela.innerHTML = quantidade;
+    precoTabela.innerHTML = preco;
 }
 
 function lerProdutosRegistrados(){
@@ -98,3 +128,5 @@ function lerProdutosRegistrados(){
 }
 
 lerProdutosRegistrados();
+
+lerBotoesEditar()
