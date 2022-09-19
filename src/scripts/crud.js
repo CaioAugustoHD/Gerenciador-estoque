@@ -23,7 +23,10 @@ btnCancelar.forEach((botao) => {
 function lerBotoesEditar(){
     let btnAbrirModalEdit = document.querySelectorAll('.btnAbrirModalEdit');
     btnAbrirModalEdit.forEach((botao) => {
-    botao.addEventListener('click', () => abrirModal(modalEdit));
+        botao.addEventListener('click', () => {
+            capturarProduto()
+            abrirModal(modalEdit)
+        })
     });
 }
 
@@ -87,6 +90,20 @@ function adicionarProduto(){
    fecharModal();
 }
 
+function capturarProduto(){
+    
+    lerLojaLogada();
+    
+    const produtoSelecionado = event.target.parentElement.parentElement.firstElementChild.textContent;
+    
+    lojaLogada.produtosLog.forEach((produto, index) => {
+        if(produtoSelecionado == produto.produto){
+            produto.index = index;
+            console.log(produto);
+        }
+    });
+}
+
 function adicionarNaTabela(produto, quantidade, preco){
 
     const linha = document.createElement('tr');
@@ -119,6 +136,7 @@ function adicionarNaTabela(produto, quantidade, preco){
     precoTabela.innerHTML = preco;
 }
 
+// ADICIONAR NA TABELA OS PRODUTOS JÁ REGISTRADOS AO RECARREGAR A PÁGINA
 function lerProdutosRegistrados(){
 
     lerLojaLogada();
@@ -129,4 +147,4 @@ function lerProdutosRegistrados(){
 
 lerProdutosRegistrados();
 
-lerBotoesEditar()
+lerBotoesEditar();

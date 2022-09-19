@@ -44,7 +44,8 @@
     - [x] ao recarregar a página, os produtos ja registrados são insseridos na tabela
 - [ ] Função editar produto da lista e localStorage
   - [x] criar botão e modal para edicão
-  - [ ] capturar os dados e o elemento que foi selecionado
+  - [x]  criar funcao capturar os dados e o elemento que foi selecionado
+  - [ ] exibir no input os dados capturados
   - [ ] validar dados do produto. Se SIM:
     - [ ] alterar/substituir na lista e localSorage
     - [ ] alterar na tabela 
