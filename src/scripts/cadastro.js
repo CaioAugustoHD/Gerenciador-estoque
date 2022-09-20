@@ -1,3 +1,6 @@
+if(localStorage.getItem('lojaLogada')){
+    window.location.replace('http://127.0.0.1:5500/src/home.html');
+}
 //>>>>>>>>>>PAGINA CADASTRO>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 const cadNome = document.getElementById('cadNome');
 const cadLoja = document.getElementById('cadLoja');

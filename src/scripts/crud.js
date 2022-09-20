@@ -1,3 +1,8 @@
+if(localStorage.getItem('lojaLogada') == null){
+    alert('Você precisa estar logado!');
+    window.location.replace('http://127.0.0.1:5500/src/login.html');
+}
+
 const corpoTabela = document.querySelector('tbody');
 
 // MODAL CREATE
