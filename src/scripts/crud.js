@@ -144,6 +144,9 @@ function excluirProduto(){
     if(apagar){
         lojaLogada.produtosLog.splice(indexProduto, 1);
         localStorage.setItem('lojaLogada', JSON.stringify(lojaLogada));
+
+        // REMOVER IMEDIATAMENTE DA TABELA
+        produtoSelecionado.remove();
     }
 
 }
