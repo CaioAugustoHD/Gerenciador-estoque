@@ -50,11 +50,11 @@
     - [x] validar dados do produto. Se SIM:
       - [x] alterar/substituir na lista e localSorage
       - [x] alterar na tabela 
-- [ ] Função excluir produto
+- [x] Função excluir produto
   - [x] excluir da lista e localStorage
-  - [ ] excluir da tabela
-- [ ] Criar função de logout
-  - [ ] excluir os itens necessarios no localStorage
+  - [x] excluir da tabela
+- [x] Criar função de logout
+  - [x] excluir os itens necessarios no localStorage
 
 ---
 

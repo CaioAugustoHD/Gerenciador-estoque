@@ -31,6 +31,10 @@ const editProduto = document.getElementById('editProduto');
 const editQuantidade = document.getElementById('editQuantidade');
 const editPreco = document.getElementById('editPreco');
 
+// BOTÃO LOGOUT
+const btnLogout = document.getElementById('logout');
+btnLogout.addEventListener('click', logout);
+
 
 function abrirModal(modal){
     modal.style.display = 'block';
@@ -53,9 +57,9 @@ function fecharModal(){
 
 let lojaLogada = {
     nomeLog : "",
-    lojalog : "",
-    cnpjlog : "",
-    senhalog : "",
+    lojaLog : "",
+    cnpjLog : "",
+    senhaLog : "",
     indexLog : "",
     produtosLog : ""
 }
@@ -198,6 +202,29 @@ function lerProdutosRegistrados(){
     lojaLogada.produtosLog.forEach(produto => {
         adicionarNaTabela(produto.produto, produto.quantidade, produto.preco);        
     });
+}
+
+function logout(){
+
+    let listaLojas = JSON.parse(localStorage.getItem('listaLojas'));
+    lerLojaLogada();
+    let indexLoja = lojaLogada.indexLog;
+   
+    let lojaLogout = {
+        nome : lojaLogada.nomeLog,
+        loja : lojaLogada.lojaLog,
+        cnpj : lojaLogada.cnpjLog,
+        senha : lojaLogada.senhaLog,
+        produtos : lojaLogada.produtosLog
+    }
+    console.log(lojaLogout);
+    listaLojas[indexLoja] = lojaLogout;
+
+    localStorage.setItem('listaLojas', JSON.stringify(listaLojas));
+    localStorage.removeItem('lojaLogada');
+
+    window.location.replace('http://127.0.0.1:5500/src/login.html');
+
 }
 
 lerProdutosRegistrados();

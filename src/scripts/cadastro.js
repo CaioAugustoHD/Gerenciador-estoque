@@ -64,9 +64,9 @@ function cadastrar(){
 
 let lojaLogada = {
     nomeLog : "",
-    lojalog : "",
-    cnpjlog : "",
-    senhalog : "",
+    lojaLog : "",
+    cnpjLog : "",
+    senhaLog : "",
     indexLog : "",
     produtosLog : ""
 }
