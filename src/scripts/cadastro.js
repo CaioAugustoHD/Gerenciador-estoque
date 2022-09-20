@@ -26,14 +26,28 @@ class lojas {
 let validacao;
 function validarDados(){
     validacao = false;
-    let cnpj = false;
+    let cnpjInvalido = false;
+    let cnpjLength = false;
     let senha = false;
 
-    // validar cnpj
+    listaLojas = JSON.parse(localStorage.getItem('listaLojas') || '[]');
+
+    // validar se cnpj contém 14 dígitos
     if(cadcnpj.value.length == 14){
-        cnpj = true;
+        cnpjLength = true;
     } else{
-        alert('CNPJ inválido!');
+        alert('CNPJ inválido!\nUm CNPJ válido deve possuir 14 dígitos!');
+    }
+
+    // validar se cnpj ainda não foi cadastrado
+    if(cnpjLength == true){
+        listaLojas.forEach((loja) =>{
+            if(cadcnpj.value == loja.cnpj){
+                alert('CNPJ já cadastrado!');
+                cnpjInvalido = true;
+            }
+        })
+    
     }
 
     //validar senha
@@ -43,7 +57,7 @@ function validarDados(){
         alert('Sua senha deve ter no mínimo 5 caracteres!');
     }
 
-    validacao = (cnpj == true) && (senha == true) ? true : false;
+    validacao = (cnpjLength == true) && (senha == true) && (cnpjInvalido == false) ? true : false;
 }
 
 
