@@ -107,17 +107,26 @@ function validarDados(){
 
 function adicionarProduto(){
 
+    // VALIDAR SE JÁ EXISTE UM PRODUTO COM ESSE NOME
+    let nomeInvalido = false;
     lerLojaLogada();
+    lojaLogada.produtosLog.forEach((produto) => {
+        if(addProduto.value == produto.produto){
+            nomeInvalido = true;
+            alert('Já existe um produto com esse nome!')
+        }
+    })
     
-   let produto = new produtos(addProduto.value, addQuantidade.value, addPreco.value);
-   lojaLogada.produtosLog.push(produto);
+    if(nomeInvalido == false){
+        let produto = new produtos(addProduto.value, addQuantidade.value, addPreco.value);
+        lojaLogada.produtosLog.push(produto);
 
-   localStorage.setItem('lojaLogada', JSON.stringify(lojaLogada));
+        localStorage.setItem('lojaLogada', JSON.stringify(lojaLogada));
 
-    // LER E ADICIONAR
-   adicionarNaTabela(addProduto.value, addQuantidade.value, addPreco.value);
-   fecharModal();
-
+            // LER E ADICIONAR
+        adicionarNaTabela(addProduto.value, addQuantidade.value, addPreco.value);
+        fecharModal();
+    }
 }
 
 let indexProduto;
