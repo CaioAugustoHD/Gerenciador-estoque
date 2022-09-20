@@ -49,9 +49,9 @@ function fecharModal(){
     modalCreate.style.display = 'none';
     modalEdit.style.display = 'none';
 
-    addPreco.value = "";
+    addPreco.value = 0;
     addProduto.value = "";
-    addQuantidade.value = "";
+    addQuantidade.value = 1;
 
     editPreco.value = "";
     editProduto.value = "";
@@ -85,9 +85,21 @@ class produtos {
 function validarDados(){
 
     if(addProduto.value.length >= 3){
-        adicionarProduto();
+
+        if((addQuantidade.value == "")||(addPreco.value == "")){
+            alert('Prencha todos os campos!');
+        } else {
+            adicionarProduto();
+        }
+
     } else if (editProduto.value.length >= 3){
-        salvarProduto();
+
+        if((editQuantidade.value == "")||(editPreco.value == "")){
+            alert('Prencha todos os campos!');
+        } else {
+            salvarProduto();
+        }
+
     } else {
         alert('O nome do produto deve conter no mínimo 3 caracteres!');
     }
