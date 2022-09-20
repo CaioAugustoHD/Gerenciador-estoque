@@ -51,7 +51,7 @@
       - [x] alterar/substituir na lista e localSorage
       - [x] alterar na tabela 
 - [ ] Função excluir produto
-  - [ ] excluir da lista e localStorage
+  - [x] excluir da lista e localStorage
   - [ ] excluir da tabela
 - [ ] Criar função de logout
   - [ ] excluir os itens necessarios no localStorage

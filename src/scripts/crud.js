@@ -138,6 +138,16 @@ function salvarProduto(){
     fecharModal();
 }
 
+function excluirProduto(){
+
+    const apagar = confirm(`Deseja mesmo excluir ${lojaLogada.produtosLog[indexProduto].produto}?`);
+    if(apagar){
+        lojaLogada.produtosLog.splice(indexProduto, 1);
+        localStorage.setItem('lojaLogada', JSON.stringify(lojaLogada));
+    }
+
+}
+
 function adicionarNaTabela(produto, quantidade, preco){
 
     const linha = document.createElement('tr');
@@ -157,6 +167,10 @@ function adicionarNaTabela(produto, quantidade, preco){
     const btnExcluir = document.createElement('button');
     btnExcluir.innerHTML = "Del";
     btnExcluir.className = "btn-crud btnExcluirProduto";
+    btnExcluir.addEventListener('click', () => {
+        capturarProduto();
+        excluirProduto();
+    })
 
 
     linha.appendChild(produtoTabela);
