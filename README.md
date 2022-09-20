@@ -1,4 +1,4 @@
-<h1 align="center">Gerenciador virtual de loja</h1>
+<h1 align="center">Gerenciador de estoque com CRUD</h1>
 <p align="center">Aplicação que permite um gerente cadastrar sua loja e fazer o gerenciamento dos produtos e vendas de forma virtual</p>
 <p align="center">Em construção... 🚧🛠 
 
@@ -42,7 +42,7 @@
     - [x] adicionar produto na lista e localStorage
     - [x] adicionar na tabela 
     - [x] ao recarregar a página, os produtos ja registrados são insseridos na tabela
-- [ ] Função editar produto da lista e localStorage
+- [x] Função editar produto da lista e localStorage
   - [x] criar botão e modal para edicão
   - [x] criar funcao capturar os dados e o elemento que foi selecionado
   - [x] exibir no input os dados capturados
