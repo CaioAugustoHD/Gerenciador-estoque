@@ -80,9 +80,22 @@ header{
 
 table { 
     margin: 10px auto;
-    width: 70%;
-    height: 50px;
+    text-align: center;
+    width: min(96%, 860px);
     border-collapse: collapse;
+}
+
+th{
+    padding: 4px;
+}
+
+tr:nth-child(even){background-color: #e8e7e8;}
+tr:nth-child(odd){background-color: rgb(255, 255, 255);}
+
+table thead th{
+    background-color: #B1A7A6;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 button {
@@ -90,6 +103,12 @@ button {
     padding: 2px;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.btn-crud{
+    margin: 2px 2px;
+    width: 25px;
+    height: 23px;
 }
 
 #logout, .btnExcluirProduto{
@@ -100,16 +119,30 @@ button {
     background-color: #660708;
     }
 
+.btnExcluirProduto{
+    background-image: url(/assets/icon-delete.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .btnAbrirModalEdit {
-    background-color: rgb(151, 151, 225);
+    background-color: rgb(134, 134, 244);
+    background-image: url(/assets/editicon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
         .btnAbrirModalEdit:hover{
-            background-color: rgb(18, 18, 159);
+            background-color: rgb(182, 182, 243);
             color: #F5F3F4;
         }
 
 #btnAbrirModalCreate{
     background-color: rgb(107, 194, 107);
+    margin: 10px;
+    padding: 0 5px;
+    height: 25px;
 }
     #btnAbrirModalCreate:hover{
         background-color: rgb(24, 91, 24);

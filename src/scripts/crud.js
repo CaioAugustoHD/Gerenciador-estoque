@@ -4,6 +4,7 @@ if(localStorage.getItem('lojaLogada') == null){
 }
 
 const corpoTabela = document.querySelector('tbody');
+const titulo = document.querySelector('h1');
 
 // MODAL CREATE
 const btnAbrirModalCreate = document.getElementById('btnAbrirModalCreate');
@@ -70,6 +71,8 @@ let lojaLogada = {
 }
 const lerLojaLogada = () => lojaLogada = JSON.parse(localStorage.getItem('lojaLogada'));
 
+lerLojaLogada();
+titulo.innerHTML = lojaLogada.lojaLog;
 
 // ADICIONAR PRODUTO
 class produtos {
@@ -163,7 +166,7 @@ function salvarProduto(){
     // ATUALIZAR IMEDIATAMENTE NA TABELA
     produtoSelecionado.firstElementChild.innerHTML = produtoEditado.produto;
     produtoSelecionado.children[1].innerHTML = produtoEditado.quantidade;
-    produtoSelecionado.children[2].innerHTML = produtoEditado.preco;
+    produtoSelecionado.children[2].innerHTML = "R$ " +produtoEditado.preco;
 
     fecharModal();
 }
@@ -190,7 +193,6 @@ function adicionarNaTabela(produto, quantidade, preco){
     const opcoes = document.createElement('td');
 
     const btnEditar = document.createElement('button');
-    btnEditar.innerHTML = "Edit";
     btnEditar.className = "btn-crud btnAbrirModalEdit";
     btnEditar.addEventListener('click', () => {
         capturarProduto();
@@ -198,7 +200,6 @@ function adicionarNaTabela(produto, quantidade, preco){
     })
 
     const btnExcluir = document.createElement('button');
-    btnExcluir.innerHTML = "Del";
     btnExcluir.className = "btn-crud btnExcluirProduto";
     btnExcluir.addEventListener('click', () => {
         capturarProduto();
@@ -218,7 +219,7 @@ function adicionarNaTabela(produto, quantidade, preco){
 
     produtoTabela.innerHTML = produto;
     quantidadeTabela.innerHTML = quantidade;
-    precoTabela.innerHTML = preco;
+    precoTabela.innerHTML = 'R$ '+ preco;
 }
 
 // ADICIONAR NA TABELA OS PRODUTOS JÁ REGISTRADOS AO RECARREGAR A PÁGINA
