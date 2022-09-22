@@ -62,7 +62,8 @@
 - [ ] Deixar as páginas responsivas
 - [ ] Validar TODOS os campos de input do projeto
   - [x] ao cadastrar nova loja, verificar se o cnpj já está cadastrado
-  - [ ] ao adicionar/editar produto, verificar se o nome já existe
+  - [x] ao adicionar produto, verificar se o nome já existe
+  - [ ] ao editar produto, verificar se o nome já existe
 - [x] Deixar todas as paginas com token 
 
 ---
