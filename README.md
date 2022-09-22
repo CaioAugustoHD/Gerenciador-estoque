@@ -1,77 +1,69 @@
 <h1 align="center">Gerenciador de estoque com CRUD</h1>
-<p align="center">Aplicação que permite um gerente cadastrar sua loja e fazer o gerenciamento dos produtos e vendas de forma virtual</p>
-<p align="center">Em construção... 🚧🛠 
+<p align="center">Sistema que permite cadastrar diversas lojas e fazer o gerenciamento dos produtos com sistem CRUD.</p>
 
 ---
 
-<h2>Sistema cadastro e login</h2>
+**<p align="center">Sumário:</p>**
+<p align="center">
+<a href="#sobre">Sobre</a> |
+<a href="#funcionalidades">Funcionalidades</a> |
+<a href="#tecnologias">Tecnologias</a> |
+<a href="#serviços-usados">Serviços usados</a> |
+<a href="#imagens">Imagens</a> |
+<a href="#como-usar">Como usar</a> |
+<a href="#pré-requisitos">Pré-requisitos</a> |
+<a href="#links">Links</a> |
+<a href="#autor">Autor</a></p>
 
-- [x] Criar página de login da loja (login.html)
-  - [x] estilizar base da página (login.css)
-- [x] Criar página de cadastro para uma nova loja (cadastro.html)
-  - [x] estilizar base da página (cadastro.html)
-- [x] Criar função de cadastro (ao acionar o botao "cadastrar")
-  - [x] validar se os valores estão corretos
-    - [x] cnpj com 14 dígitos
-    - [x] senha com mínimo de 5 caracteres
-      - [x] Caso não: exibir mensagem de erro
-      - [x] Caso sim:    
-        - [x] pegar os valores de cada input
-        - [x] criar um objeto da classe lojas com os dados na loja cadastrada
-        - [x] adicionar objeto no array de lista com todas as lojas
-        - [x] armazenar no localStorage a lista de lojas
-        - [x] ir para a tela de login
-- [x] Criar função de login (ao acionar o botao "entrar")
-  - [x] verificar se o cnpj e a senha estão corretos (se estão registradas no banco de dados)
-    - [x] Caso não: exibir mensagem de erro
-    - [x] Caso sim:
-      - [x] entre na página home com o login e os dados da loja
 
----
 
-- [x] Criar página home, para o gerenciador CRUD de produtos (home.html)
-  - [x] estilizar base da página (home.css)
-  - [x] criar modal
+## Sobre
+Esse projeto foi criado no intuito de ser uma ferramente para administradores e gerentes de qualquer loja ou comércio. Consiste em registrar o cadastro e disponibilizar ao usuário uma tabela de gerenciamento de produtos.
 
----
 
-<h2>Criar sistema CRUD dos produtos</h2>
+## Funcionalidades
+As principais funcionalidades do projeto são:
 
-- [x] Funcão adicionar produto
-  - [x] validar dados do produto. Se SIM: 
-    - [x] adicionar produto na lista e localStorage
-    - [x] adicionar na tabela 
-    - [x] ao recarregar a página, os produtos ja registrados são insseridos na tabela
-- [x] Função editar produto da lista e localStorage
-  - [x] criar botão e modal para edicão
-  - [x] criar funcao capturar os dados e o elemento que foi selecionado
-  - [x] exibir no input os dados capturados
-  - [x] criar função botão salvar
-    - [x] validar dados do produto. Se SIM:
-      - [x] alterar/substituir na lista e localSorage
-      - [x] alterar na tabela 
-- [x] Função excluir produto
-  - [x] excluir da lista e localStorage
-  - [x] excluir da tabela
-- [x] Criar função de logout
-  - [x] excluir os itens necessarios no localStorage
+✅ Cadastro de loja;
 
----
+✅ Sistema de login que valida se a loja está cadastrada;
 
-- [x] Terminar estilização das páginas
-- [ ] Estilizar os modais
-- [ ] Deixar as páginas responsivas
-- [ ] Validar TODOS os campos de input do projeto
-  - [x] ao cadastrar nova loja, verificar se o cnpj já está cadastrado
-  - [x] ao adicionar produto, verificar se o nome já existe
-  - [ ] ao editar produto, verificar se o nome já existe
-- [x] Deixar todas as paginas com token 
+✅ Gerenciador de estoque com CRUD;
 
----
+✅ Facilidade de executar as funções do gerenciador (adicionar, editar ou excluir produto);
 
-<h2>Futuras melhorias</h2>
+✅ Para gerenciar outra loja, basta clicar no botão de "logout" e entrar com os dados da outra conta.
 
-- [ ] Limitar no input de cnpj máximo de 14 dígitos
-- [ ] Estilizar mensagens de erro
-- [ ] Criar configurações da loja
 
+## Tecnologias
+* HTML5
+* CSS3
+* JavaScript
+
+
+## Serviços usados
+* GitHub
+
+
+## Imagens
+
+
+
+## Como usar
+Acesse a página de login, caso sua loja ainda não esteja cadastrada, clique em "cadastre aqui" para acessar a página de cadastro e poder faze-lo. Após feito, faça o login. Você será direcionado para o gerenciador CRUD, onde está a tabela com os produtos, a opção de adicionar novo produto, opção de editar produto na tabela e opção para excluir um produto do seu estoque.
+Caso queira entrar com outra conta, não se preocupe, seu estoque está salvo! Basta clicar no botão de "logout" para encerrar sua seção.
+
+
+## Pré requisitos
+O sistema está em processo de hospedagem, em breve estará disponível para uso.
+
+
+## Links
+* Repositório: https://github.com/CaioAugustoHD/Gerenciador-estoque-CRUD
+
+## Autor
+✨ Feito por Caio Augusto!!!
+
+* caioaugustosbs@gmail.com
+* <a href="https://www.linkedin.com/in/caio-augusto-cap/" target=”_blank”>LinkedIn</a>
+* <a href="https://github.com/CaioAugustoHD" target=”_blank”>GitHub</a>
