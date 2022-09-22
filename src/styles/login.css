@@ -47,7 +47,8 @@ button{
     width: 25%;
     display: block;
     margin: auto;
-    font-size: 1.2em;
+    padding: 2px 0;
+    font-size: 1.1em;
     cursor: pointer;
     background-color: #292f34ac;
     color: white;

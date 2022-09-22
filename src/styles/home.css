@@ -6,6 +6,10 @@
     font-family: 'Inter', sans-serif;
 }
 
+body{
+    background-color: #D3D3D3;
+}
+
 /* MODAL */
 .modal {
     position: absolute;
@@ -67,7 +71,8 @@ input[type="number"]{
 }
 
 header{
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: #B1A7A6;
+    color: #0B090A;
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -81,5 +86,32 @@ table {
 }
 
 button {
+    border: 1px solid #161A1D;
+    padding: 2px;
+    border-radius: 5px;
     cursor: pointer;
 }
+
+#logout, .btnExcluirProduto{
+    background-color: #b23f40;
+    color: #F5F3F4;
+}
+    #logout:hover, .btnExcluirProduto:hover{
+    background-color: #660708;
+    }
+
+.btnAbrirModalEdit {
+    background-color: rgb(151, 151, 225);
+}
+        .btnAbrirModalEdit:hover{
+            background-color: rgb(18, 18, 159);
+            color: #F5F3F4;
+        }
+
+#btnAbrirModalCreate{
+    background-color: rgb(107, 194, 107);
+}
+    #btnAbrirModalCreate:hover{
+        background-color: rgb(24, 91, 24);
+        color: #F5F3F4;
+    }
