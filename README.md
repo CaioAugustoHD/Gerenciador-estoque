@@ -58,7 +58,8 @@
 
 ---
 
-- [ ] Terminar estilização das páginas
+- [x] Terminar estilização das páginas
+- [ ] Estilizar os modais
 - [ ] Deixar as páginas responsivas
 - [ ] Validar TODOS os campos de input do projeto
   - [x] ao cadastrar nova loja, verificar se o cnpj já está cadastrado
