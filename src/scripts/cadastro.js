@@ -1,5 +1,5 @@
 if(localStorage.getItem('lojaLogada')){
-    window.location.replace('http://127.0.0.1:5500/src/home.html');
+    window.location.replace('./home.html');
 }
 //>>>>>>>>>>PAGINA CADASTRO>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 const cadNome = document.getElementById('cadNome');
@@ -74,7 +74,7 @@ function cadastrar(){
 
         localStorage.setItem('listaLojas', JSON.stringify(listaLojas));
         
-        window.location.replace("http://127.0.0.1:5500/src/login.html");
+        window.location.replace("./login.html");
     }
 }
 
@@ -109,7 +109,7 @@ function login(){
 
             localStorage.setItem('lojaLogada', JSON.stringify(lojaLogada));
             
-            window.location.replace('http://127.0.0.1:5500/src/home.html');
+            window.location.replace('./home.html');
         }
     });
 
