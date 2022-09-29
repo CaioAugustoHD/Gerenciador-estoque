@@ -43,23 +43,36 @@ As principais funcionalidades do projeto são:
 
 ## Serviços usados
 * GitHub
+* Netlify (hospedagem)
 
 
 ## Imagens
+**<p align="center">Tela para gerenciamento do estoque:</p>**
+<img src="img/telahome.png" alt="Imagem do gerenciador de estoque">
 
+---
+**<p align="center">Tela de login:</p>**
+<img src="img/telalogin.png" alt="Imagem da tela de login">
+
+---
+**<p align="center">Tela para cadastro de nova loja:</p>**
+<img src="img/telacadastro.png" alt="Imagem da tela de cadastro">
+
+---
 
 
 ## Como usar
 Acesse a página de login, caso sua loja ainda não esteja cadastrada, clique em "cadastre aqui" para acessar a página de cadastro e poder faze-lo. Após feito, faça o login. Você será direcionado para o gerenciador CRUD, onde está a tabela com os produtos, a opção de adicionar novo produto, opção de editar produto na tabela e opção para excluir um produto do seu estoque.
-Caso queira entrar com outra conta, não se preocupe, seu estoque está salvo! Basta clicar no botão de "logout" para encerrar sua seção.
+Caso queira entrar com outra conta, não se preocupe, seu estoque está salvo! Basta clicar no botão "Sair" para encerrar sua seção.
 
 
 ## Pré requisitos
-O sistema está em processo de hospedagem, em breve estará disponível para uso.
+Para abrir o gerenciador, basta o uso de um navegador de sua preferência.
 
 
 ## Links
 * Repositório: https://github.com/CaioAugustoHD/Gerenciador-estoque-CRUD
+* Deploy: https://gerenciadorestoque.netlify.app/
 
 ## Autor
 ✨ Feito por Caio Augusto!!!
