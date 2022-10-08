@@ -1,5 +1,5 @@
-<h1 align="center">Gerenciador de estoque com CRUD</h1>
-<p align="center">Sistema que permite cadastrar diversas lojas e fazer o gerenciamento dos produtos com sistem CRUD.</p>
+<h1 align="center">Gerenciador de estoque</h1>
+<p align="center">Sistema que permite realizar o cadastro da loja para ter um controle sobre seu estoque.</p>
 
 ---
 
@@ -18,7 +18,7 @@
 
 
 ## Sobre
-Esse projeto foi criado no intuito de ser uma ferramente para administradores e gerentes de qualquer loja ou comércio. Consiste em registrar o cadastro e disponibilizar ao usuário uma tabela de gerenciamento de produtos.
+Esse projeto foi criado no intuito de ser uma ferramenta para administradores ou gerentes de qualquer loja ou comércio. Consiste em registrar o cadastro do estabelecimento e disponibilizar ao usuário uma tabela de gerenciamento dos produtos, feita com sistema CRUD.
 
 
 ## Funcionalidades
@@ -28,7 +28,7 @@ As principais funcionalidades do projeto são:
 
 ✅ Sistema de login que valida se a loja está cadastrada;
 
-✅ Gerenciador de estoque com CRUD;
+✅ Gerenciador de estoque;
 
 ✅ Facilidade de executar as funções do gerenciador (adicionar, editar ou excluir produto);
 
@@ -62,16 +62,17 @@ As principais funcionalidades do projeto são:
 
 
 ## Como usar
-Acesse a página de login, caso sua loja ainda não esteja cadastrada, clique em "cadastre aqui" para acessar a página de cadastro e poder faze-lo. Após feito, faça o login. Você será direcionado para o gerenciador CRUD, onde está a tabela com os produtos, a opção de adicionar novo produto, opção de editar produto na tabela e opção para excluir um produto do seu estoque.
-Caso queira entrar com outra conta, não se preocupe, seu estoque está salvo! Basta clicar no botão "Sair" para encerrar sua seção.
+<p>Acesse a página de login. Caso sua loja ainda não esteja cadastrada, clique em "cadastre aqui" para poder realizar o cadastro. Após feito, faça o login.</p>
+<p>Você será direcionado para o gerenciador, onde está a tabela (sistema CRUD) dos produtos com as seguintes opções:<ul><li>adicionar novo produto;</li> <li>editar produto na tabela;</li> <li>excluir um produto do seu estoque.</li></ul></p>
+<p>Caso queira entrar com outra conta, não se preocupe, seu estoque está salvo! Basta clicar no botão "Sair" para encerrar sua seção.</p>
 
 
 ## Pré requisitos
-Para abrir o gerenciador, basta o uso de um navegador de sua preferência.
+Para abrir o gerenciador, basta o uso de um navegador de sua preferência e ter realizado o cadastro no site.
 
 
 ## Links
-* Repositório: https://github.com/CaioAugustoHD/Gerenciador-estoque-CRUD
+* Repositório: https://github.com/CaioAugustoHD/Gerenciador-estoque
 * Deploy: https://gerenciadorestoque.netlify.app/
 
 ## Autor
