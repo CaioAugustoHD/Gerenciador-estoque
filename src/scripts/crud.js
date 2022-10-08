@@ -1,5 +1,4 @@
 if(localStorage.getItem('lojaLogada') == null){
-    alert('Você precisa estar logado!');
     window.location.replace('./login.html');
 }
 
